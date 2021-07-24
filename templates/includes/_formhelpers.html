@@ -1,0 +1,4 @@
+{% macro render_field(form) %} {{ form.label }} {{ form(**kwargs)|safe }} {% if
+form.errors %} {% for error in form.errors %}
+<span class="help-inline">{{error}}</span>
+{% endfor %} {% endif %} {% endmacro %}
